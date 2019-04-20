@@ -1,5 +1,5 @@
 /**
- * @function getPassword
+ * @function getPassword - 암호 생성 함수
  * @param {number} passwordLength - 암호 길이
  * @returns {string} 암호
  */
