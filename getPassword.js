@@ -1,3 +1,8 @@
+/**
+ * @function getPassword
+ * @param {number} passwordLength - 암호 길이
+ * @returns {string} 암호
+ */
 function getPassword(passwordLength){
   try {
     // 사용할 문자 타입들 정의
@@ -8,7 +13,7 @@ function getPassword(passwordLength){
     types.special = '!@#$%^&*()~-_+=[]{};:,./<>?';
   
     // 사용하는 타입 갯수보다 더 짧은 암호를 만들려고 하면 에러
-    if (passwordLength < Object.keys(types).length) throw new Error('Too short password length to create');
+    if (Number(passwordLength) < Object.keys(types).length) throw new Error('Too short password length to create');
     
     // 사용가능한 전체 문자열 세트 생성
     var useableCharacters = (function(src){
